@@ -36,12 +36,6 @@ img {
   margin: 13px;
   float: left;
 }
-.box {
-  display: block;
-  width: 200px;
-  height: 200px;
-  background: gray;
-}
 
 @media Screen and (max-width: 520px) {
   header {
