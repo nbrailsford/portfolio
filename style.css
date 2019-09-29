@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+header {
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  height: 60vh;
+  padding-top: 6rem;
+  background: #0080b8;
+}
+header > h1 {
+  margin-top: -50px;
+}
+h1 {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 30px;
+  background-image: linear-gradient(45deg, rgb(27, 17, 13), rgb(228, 129, 42));
+  background-clip: text;
+  color: transparent;
+  background-size: 200%;
+  animation: animate 5s infinite alternate;
+}
+header > p {
+  font-size: 1.3em;
+}
+p {
+  line-height: 200%;
+  width: 80%;
+  padding: 20px 10px;
+  font-size: 16px;
+  margin: 0 auto;
+}
+nav {
+  color: white;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  background: #24292e;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.6em;
+  z-index: 1;
+}
+a {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav > a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  margin: 2px;
+  width: 0;
+  background-color: gray;
+  transition: all ease-in-out 200ms;
+}
+a:hover::before {
+  width: 100%;
+}
+.container {
+  background: white;
+  width: 100%;
+}
+.bottom {
+  float: left;
+  padding: 5%;
+  width: 40%;
+}
+p > a {
+  color: black;
+}
+p > a:hover {
+  text-decoration: underline;
+  color: gray;
+}
+.projects {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.project {
+  width: 90vw;
+}
+.app {
+  position: relative;
+  width: 50%;
+  margin: 13px;
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 3%;
+}
+.app:hover {
+  left: -2px;
+  top: -2px;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.7);
+}
+h3 {
+  text-align: center;
+}
+@media Screen and (max-width: 520px) {
+  header {
+    height: 70vh;
+  }
+  a {
+    display: flex;
+  }
+  p {
+    width: 90%;
+  }
+  .project {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .app {
+    width: 90%;
+    margin: auto;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 5%;
+    width: 80%;
+  }
+}
+
+/* create arrow down from top screen */
+@media (min-height: 600px) and (min-width: 580px) {
+  header::before,
+  header::after {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background: #0080b8;
+    bottom: 0;
+    z-index: 3;
+  }
+  header::before {
+    left: 50%;
+    transform: skew(0, -20deg);
+  }
+  header::after {
+    right: 50%;
+    transform: skew(0, 20deg);
+  }
+}
+
+@media Screen and (max-width: 800px) {
+  .bottom {
+    padding: 1px;
+    margin: 10px auto;
+  }
+  p {
+    width: 90%;
+    line-height: 120%;
+  }
+}
