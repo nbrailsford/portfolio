@@ -31,6 +31,7 @@ h1 {
   margin-bottom: 30px;
   background-image: linear-gradient(45deg, rgb(27, 17, 13), rgb(228, 129, 42));
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   background-size: 200%;
   animation: animate 5s infinite alternate;
@@ -107,6 +108,7 @@ p > a:hover {
   float: left;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   border-radius: 3%;
+  border: 3px solid #05386b;
 }
 .app:hover {
   left: -2px;
