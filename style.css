@@ -47,18 +47,19 @@ p {
   margin: 0 auto;
 }
 nav {
+  display: flex;
   color: white;
   width: 100vw;
   position: sticky;
   top: 0;
-  align-self: flex-start;
   background: #24292e;
-  display: flex;
   justify-content: space-around;
   padding: 0.6em;
   z-index: 1;
 }
 a {
+  position: relative;
+  top: 5px;
   color: white;
   list-style-type: none;
   text-decoration: none;
