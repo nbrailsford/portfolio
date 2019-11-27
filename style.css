@@ -15,12 +15,15 @@
 }
 
 header {
+  background-image: url("images/mtn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   text-align: center;
   width: 100vw;
   height: 60vh;
   padding-top: 6rem;
-  background: #0080b8;
+  background-color: #dfcbc0;
 }
 header > h1 {
   margin-top: -50px;
@@ -57,6 +60,66 @@ nav {
   padding: 0.6em;
   z-index: 1;
 }
+
+/* Dropdown Button */
+.dropbtn {
+  position: relative;
+  top: 10px;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+nav > .dropbtn::before {
+  content: "";
+  display: block;
+  height: 3px;
+  margin: 2px;
+  width: 0;
+  background-color: gray;
+  transition: all ease-in-out 200ms;
+}
+.dropbtn:hover::before {
+  width: 100%;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
 a {
   position: relative;
   top: 5px;
@@ -77,6 +140,7 @@ nav > a::before {
 a:hover::before {
   width: 100%;
 }
+
 .container {
   background: white;
   width: 100%;
@@ -98,6 +162,7 @@ p > a:hover {
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  background-color: white;
 }
 .project {
   width: 90vw;
@@ -148,7 +213,7 @@ h3 {
   }
 }
 
-/* create arrow down from top screen */
+/* create arrow down from top screen 
 @media (min-height: 600px) and (min-width: 580px) {
   header::before,
   header::after {
@@ -156,7 +221,9 @@ h3 {
     content: "";
     width: 70px;
     height: 70px;
-    background: #0080b8;
+    /* background: #0080b8; 
+    background-image: url("water.jpg");
+    background-size: cover;
     bottom: 0;
     z-index: 3;
   }
@@ -168,7 +235,7 @@ h3 {
     right: 50%;
     transform: skew(0, 20deg);
   }
-}
+} */
 
 @media Screen and (max-width: 800px) {
   .bottom {
